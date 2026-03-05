@@ -1,7 +1,7 @@
 /* navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: row;
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(247, 247, 247, 0.9);
@@ -17,6 +17,12 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary);
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar .navbar-nav a {
@@ -24,6 +30,7 @@
   display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
+  text-decoration: none;
 }
 
 .navbar .navbar-nav a:hover {
@@ -78,6 +85,9 @@
     width: 30rem;
     height: 100vh;
     transition: 0.35s;
+    flex-direction: column; /* Susun ke bawah */
+    align-items: flex-start; /* Opsional: rata kiri */
+    gap: 0.5rem;
   }
 
   .navbar .navbar-nav.active {
@@ -88,8 +98,9 @@
     color: var(--bg);
     display: block;
     margin: 1.5rem;
-    padding: o.5rem;
+    padding: 0.5rem;
     font-size: 2rem;
+    align-self: stretch;
   }
 
   .navbar .navbar-nav a::after {
