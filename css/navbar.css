@@ -116,7 +116,7 @@
     font-size: 55%;
   }
 
-  #humburger-menu {
+   #humburger-menu {
     display: inline-block;
   }
 
@@ -128,6 +128,9 @@
     width: 30rem;
     height: 100vh;
     transition: 0.35s;
+    flex-direction: column; /* Susun ke bawah */
+    align-items: flex-start; /* Opsional: rata kiri */
+    gap: 0.5rem;
   }
 
   .navbar .navbar-nav.active {
@@ -138,8 +141,9 @@
     color: var(--bg);
     display: block;
     margin: 1.5rem;
-    padding: o.5rem;
+    padding: 0.5rem;
     font-size: 2rem;
+    align-self: stretch;
   }
 
   .navbar .navbar-nav a::after {
@@ -148,4 +152,3 @@
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
-}
